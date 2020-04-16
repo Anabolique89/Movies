@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Favourite Movie</title>
+    <link rel="stylesheet" href="movies.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Whats your favourite movie?</h1>
+    </header>
+    <form class="favourite-movies" action="contactform.js" method="post">
+      <h2>Title</h2>
+      <input type="text" name="Title" placeholder="Add movie title" />
+      <h2>Genre</h2>
+      <select name="Genre">
+        <option value="Drama">Drama</option>
+        <option value="Drama">Adventure</option>
+        <option value="Drama">Thriller</option>
+        <option value="Drama">Horror</option>
+        <option value="Drama">Comedy</option>
+        <option value="Drama">Psychological</option>
+        <option value="Drama">Sci-Fi</option>
+      </select>
+      <!-- <input type="text" name="genre" value="Drama" /> -->
+
+      <h2>Rating</h2>
+      1<input type="radio" name="Rating" value="1" /> 2<input
+        type="radio"
+        name="rating"
+        value="2"
+      />
+
+      3<input type="radio" name="Rating" value="3" /> 4<input
+        type="radio"
+        name="rating"
+        value="4"
+      />
+
+      5<input type="radio" name="Rating" value="5" /> 6<input
+        type="radio"
+        name="rating"
+        value="6"
+      />
+
+      7<input type="radio" name="Rating" value="7" /> 8<input
+        type="radio"
+        name="rating"
+        value="8"
+      />
+
+      9<input type="radio" name="Rating" value="9" /> 10<input
+        type="radio"
+        name="rating"
+        value="10"
+        checked
+      />
+      <br />
+      <h2>Tagline</h2>
+      <textarea name="Tagline" placeholder="Add movie tagline ..."></textarea>
+      <input type="submit" value="Save" />
+      <!--<input type="submit" name="submit" /> -->
+    </form>
+  </body>
+</html>
