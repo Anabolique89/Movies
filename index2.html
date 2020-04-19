@@ -40,6 +40,7 @@
         <hr />
         <label>
           <fieldset>
+            <p>Please choose a number</p>
             Rating
             <br />
             1<input type="radio" name="rating" value="1" /> 2<input
@@ -70,7 +71,6 @@
               type="radio"
               name="rating"
               value="10"
-              checked
             />
             <br />
           </fieldset>
@@ -92,9 +92,18 @@
         <input type="submit" value="Save" />
         <!--<input type="submit" name="submit" /> -->
       </form>
-      <div class="update-me">
-        <h2>I'm a text that auto updates!</h2>
-      </div>
+      <!--Template-->
+      <template>
+        <article>
+          <header>
+            <h2>Title</h2>
+            <h3>Genre</h3>
+            <span class="template-rating" type="text">Rating</span>
+          </header>
+        </article>
+      </template>
+      <!--Template-->
+      <div id="movie-list"></div>
     </main>
     <script src="main.js"></script>
   </body>
