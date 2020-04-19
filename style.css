@@ -1,0 +1,64 @@
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Permanent Marker", "Lucida Sans Unicode", sans-serif;
+}
+legend,
+label {
+  cursor: pointer;
+  font-weight: bold;
+}
+form {
+  width: 500px;
+}
+input {
+  width: 100%;
+}
+textarea {
+  resize: vertical;
+  max-height: 300px;
+}
+input,
+textarea {
+  outline: none;
+  border: 1px solid #ddd;
+}
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+  border: 1px solid #ddd;
+}
+::placeholder {
+  color: hotpink;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: hotpink;
+}
+::-ms-input-placeholder {
+  color: hotpink;
+  opacity: 1;
+}
+hr {
+  display: none;
+  margin-bottom: 20px;
+}
+main {
+}
+.invalid {
+  border: 2px solid red;
+}
+input + p {
+  display: none;
+}
+input.invalid + p {
+  display: block;
+}
+.unknown-tagline {
+  display: none;
+}

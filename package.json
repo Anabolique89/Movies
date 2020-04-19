@@ -1,0 +1,27 @@
+{
+  "name": "moviesworkspace-form",
+  "version": "0.0.1",
+  "description": "Awesome movies coming ",
+  "main": "main.js",
+  "scripts": {
+    "start": "parcel *.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anabolique89/Movies.git"
+  },
+  "keywords": [
+    "movies"
+  ],
+  "author": "Nina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anabolique89/Movies/issues"
+  },
+  "homepage": "https://github.com/Anabolique89/Movies#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3"
+  }
+}
