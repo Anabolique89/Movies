@@ -72,7 +72,10 @@ function postMovie(payload) {
     body: postData,
   })
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => {
+      console.log(data);
+      showMovie(data);
+    });
 }
 
 function getMovies() {
@@ -94,5 +97,27 @@ function showMovie(movie) {
   clone.querySelector("h2").textContent = movie.title;
   clone.querySelector("h3").textContent = movie.genre;
   clone.querySelector("span.template-rating").textContent = movie.rating;
+  clone.querySelector(".date").textContent = movie.year;
+  clone.querySelector("h5").textContent = movie.tagline;
+  clone
+    .querySelector(`[data-action="delete"]`)
+    .addEventListener("click", (e) => deleteMovie(movie._id));
+
+  clone
+    .querySelectorAll(`article, button[data-action="delete"]`)
+    .forEach((el) => (el.dataset.id = movie._id));
   movieContainer.appendChild(clone);
+}
+function deleteMovie(id) {
+  fetch(`${endpoint}/${id}`, {
+    method: "delete",
+    headers: {
+      accept: "application/json",
+      "x-apikey": apiKey,
+      "cache-control": "no-cache",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {});
+  document.querySelector(`article[data-id="${id}"]`).remove();
 }

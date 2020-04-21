@@ -3,33 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms</title>
+    <title>Your Favourite Movie</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sass/style.scss" />
   </head>
   <body>
-    <h2>Place your order</h2>
-    <p>You can ring this number bla bla bla......</p>
-    <form action="mailto:ninandreeapopovici@gmail.com" method="post">
-      <table>
-        <tr>
-          <td>
-            <input type="text" name="name" size="30" />
-          </td>
-        </tr>
-        <tr>
-          <td>Phone :</td>
-          <td>
-            <input
-              type="text"
-              name="ph"
-              size="30"
-              maxlength="10"
-              value="A number you can ring"
+    <header>
+      <h1>Whats your favourite movie?</h1>
+    </header>
+    <hr />
+    <main>
+      <form class="favourite-movies" method="post">
+        <label>
+          Title
+          <input
+            type="text"
+            name="title"
+            placeholder="Add movie title"
+            required
+          />
+          <p>Please enter name</p>
+        </label>
+        <hr />
+        <label>
+          Genre
+          <select name="genre">
+            <option value="Drama">Drama</option>
+            <option value="Drama">Adventure</option>
+            <option value="Drama">Thriller</option>
+            <option value="Drama">Horror</option>
+            <option value="Drama">Comedy</option>
+            <option value="Drama">Psychological</option>
+            <option value="Drama">Sci-Fi</option>
+          </select>
+        </label>
+        <hr />
+        <label>
+          <fieldset class="form-control" data-type="horizontal">
+            <p>Please choose a number</p>
+            Rating
+            <br />
+            1<input type="radio" name="rating" value="1" /> 2<input
+              type="radio"
+              name="rating"
+              value="2"
             />
-          </td>
-        </tr>
-      </table>
-    </form>
+
+            3<input type="radio" name="rating" value="3" /> 4<input
+              type="radio"
+              name="rating"
+              value="4"
+            />
+
+            5<input type="radio" name="rating" value="5" /> 6<input
+              type="radio"
+              name="rating"
+              value="6"
+            />
+
+            7<input type="radio" name="rating" value="7" /> 8<input
+              type="radio"
+              name="rating"
+              value="8"
+            />
+
+            9<input type="radio" name="rating" value="9" /> 10<input
+              type="radio"
+              name="rating"
+              value="10"
+            />
+            <br />
+          </fieldset>
+        </label>
+
+        <label>
+          Tagline
+          <textarea
+            name="tagline"
+            placeholder="Add movie tagline ..."
+            comenteditable
+          ></textarea>
+        </label>
+        <hr />
+        <label class="unknown-tagline">
+          Unknown tagline
+          <input type="radio" name="unknown" />
+        </label>
+        <input type="submit" value="Save" />
+        <!--<input type="submit" name="submit" /> -->
+      </form>
+    </main>
+    <div class="collection-title">
+      <img src="img/movie-beginning.png" />
+      Movie Collection
+    </div>
+    <div id="movie-list"></div>
+    <div class="container">
+      <!--Template-->
+      <template>
+        <article data-id>
+          <h2>Title</h2>
+          <span class="date"></span>
+          <h3>Genre</h3>
+          <h5></h5>
+          <span class="template-rating" type="text">Rating</span>
+          <button data-action="delete" class="delete-button" data-id>
+            Delete
+          </button>
+        </article>
+      </template>
+    </div>
+    <!--Template-->
 
     <script src="main.js"></script>
   </body>

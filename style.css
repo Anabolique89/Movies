@@ -1,26 +1,87 @@
 * {
   padding: 0px;
   margin: 0;
-  box-sizing: border-box;
 }
+
 body {
+  background: url("img/TOP-10-CINEMATIC-BACKGROUNDS-FOR-THUMBNAILS.jpeg");
+  background-size: cover;
+  background-position: fixed;
+  width: 90%;
+  max-width: 1000px;
+  margin: 2em auto;
+  font: 0.9em/1.2;
+  font-family: "Sen", sans-serif;
+  color: rgba(207, 232, 220, 1);
+}
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+.collection-title {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+}
+#movie-list > article {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
   display: flex;
   flex-direction: column;
+  align-items: left;
+  padding: 10px;
+  color: #333;
+  font-size: 1rem;
+  line-height: 0.5rem;
+}
+h2 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+h3 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
   font-family: "Permanent Marker", "Lucida Sans Unicode", sans-serif;
 }
+.template-rating {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-weight: bold;
+}
+#movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
+  gap: 20px;
+}
+
 legend,
 label {
   cursor: pointer;
   font-weight: bold;
 }
 form {
-  width: 500px;
+  width: 600px;
 }
 input {
   width: 100%;
 }
 textarea {
-  resize: vertical;
+  resize: horizontal;
   max-height: 300px;
 }
 input,
@@ -48,8 +109,7 @@ hr {
   display: none;
   margin-bottom: 20px;
 }
-main {
-}
+
 .invalid {
   border: 2px solid red;
 }
@@ -62,3 +122,37 @@ input.invalid + p {
 .unknown-tagline {
   display: none;
 }
+
+fieldset.form-control {
+  border: 0;
+}
+input[type="radio"] {
+  -moz-appearence: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: horizontal;
+  margin-right: 1.2vw;
+  margin-left: 1.2vw;
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+}
+
+/*
+input:checked::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: red;
+  border-radius: inherit;
+  place-self: center;
+}
+input:checked::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: greenyellow;
+  border-radius: inherit;
+  place-self: center;
+}
+*/

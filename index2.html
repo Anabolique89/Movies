@@ -39,7 +39,7 @@
         </label>
         <hr />
         <label>
-          <fieldset>
+          <fieldset class="form-control" data-type="horizontal">
             <p>Please choose a number</p>
             Rating
             <br />
@@ -92,19 +92,29 @@
         <input type="submit" value="Save" />
         <!--<input type="submit" name="submit" /> -->
       </form>
+    </main>
+    <div class="collection-title">
+      <img src="img/movie-beginning.png" />
+      Movie Collection
+    </div>
+    <div id="movie-list"></div>
+    <div class="container">
       <!--Template-->
       <template>
-        <article>
-          <header>
-            <h2>Title</h2>
-            <h3>Genre</h3>
-            <span class="template-rating" type="text">Rating</span>
-          </header>
+        <article data-id>
+          <h2>Title</h2>
+          <span class="date"></span>
+          <h3>Genre</h3>
+          <h5></h5>
+          <span class="template-rating" type="text">Rating</span>
+          <button data-action="delete" class="delete-button" data-id>
+            Delete
+          </button>
         </article>
       </template>
-      <!--Template-->
-      <div id="movie-list"></div>
-    </main>
+    </div>
+    <!--Template-->
+
     <script src="main.js"></script>
   </body>
 </html>
