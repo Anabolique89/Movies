@@ -15,32 +15,34 @@
     <main>
       <form class="favourite-movies" method="post">
         <label>
-          Title
+          Movie Title
           <input
             type="text"
             name="title"
             placeholder="Add movie title"
+            class="movie-title-pick"
             required
           />
           <p>Please enter name</p>
         </label>
         <hr />
+        <br />
         <label>
-          Genre
-          <select name="genre">
+          Movie Genre
+          <select name="genre" class="movie-title-pick">
             <option value="Drama">Drama</option>
-            <option value="Drama">Adventure</option>
-            <option value="Drama">Thriller</option>
-            <option value="Drama">Horror</option>
-            <option value="Drama">Comedy</option>
-            <option value="Drama">Psychological</option>
-            <option value="Drama">Sci-Fi</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Horror">Horror</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Psychological">Psychological</option>
+            <option value="Sci-Fi">Sci-Fi</option>
           </select>
         </label>
         <hr />
         <label>
           <fieldset class="form-control" data-type="horizontal">
-            <p>Please choose a number</p>
+            <p class="rating-invisible">Please choose a number</p>
             Rating
             <br />
             1<input type="radio" name="rating" value="1" /> 2<input
@@ -79,6 +81,7 @@
         <label>
           Tagline
           <textarea
+            class="movie-title-pick"
             name="tagline"
             placeholder="Add movie tagline ..."
             comenteditable
@@ -89,12 +92,12 @@
           Unknown tagline
           <input type="radio" name="unknown" />
         </label>
-        <input type="submit" value="Save" />
+        <input type="submit" value="Save" class="btn fill" />
         <!--<input type="submit" name="submit" /> -->
       </form>
     </main>
     <div class="collection-title">
-      <img src="img/movie-beginning.png" />
+      <img src="img/movie-beginning.png" class="movie-icon" />
       Movie Collection
     </div>
     <div id="movie-list"></div>
@@ -103,12 +106,11 @@
       <template>
         <article data-id>
           <h2>Title</h2>
-          <span class="date"></span>
           <h3>Genre</h3>
-          <h5></h5>
           <span class="template-rating" type="text">Rating</span>
-          <button data-action="delete" class="delete-button" data-id>
-            Delete
+          <div class="spacer"></div>
+          <button data-action="delete" class="btn fill" data-id>
+            <span>Delete</span>
           </button>
         </article>
       </template>

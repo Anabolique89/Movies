@@ -4,13 +4,14 @@
 }
 
 body {
-  background: url("img/TOP-10-CINEMATIC-BACKGROUNDS-FOR-THUMBNAILS.jpeg");
+  background: url("img/TOP-10-CINEMATIC-BACKGROUNDS-FOR-THUMBNAILS.jpeg")
+    no-repeat;
   background-size: cover;
   background-position: fixed;
   width: 90%;
   max-width: 1000px;
   margin: 2em auto;
-  font: 0.9em/1.2;
+  font-size: 1.2em;
   font-family: "Sen", sans-serif;
   color: rgba(207, 232, 220, 1);
 }
@@ -23,6 +24,13 @@ main {
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: rgba(79, 185, 227, 0.3);
+  padding: 15px 15px;
+  border-radius: 5px;
+  width: 60%;
+  margin-left: 18%;
+  border: 2px solid rgb(79, 185, 227);
 }
 .collection-title {
   display: flex;
@@ -30,8 +38,19 @@ header {
   font-size: 3em;
   margin-top: 1vh;
   margin-bottom: 3vh;
+  background: rgba(79, 185, 227, 0.3);
+  padding: 15px 15px;
+  border-radius: 5px;
+  width: 60%;
+  margin-left: 18%;
+  border: 2px solid rgb(79, 185, 227);
+}
+img.movie-icon {
+  max-width: 100%;
+  height: auto;
 }
 #movie-list > article {
+  position: relative;
   border-radius: 5px;
   padding: 10px;
   background-color: rgb(207, 232, 220);
@@ -42,17 +61,18 @@ header {
   padding: 10px;
   color: #333;
   font-size: 1rem;
-  line-height: 0.5rem;
+  line-height: 0.6rem;
 }
+
 h2 {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 8px;
 }
 h3 {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 6px;
   font-family: "Permanent Marker", "Lucida Sans Unicode", sans-serif;
 }
 .template-rating {
@@ -60,6 +80,17 @@ h3 {
   flex-direction: column;
   padding: 10px;
   font-weight: bold;
+}
+.date {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+h5 {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  line-height: 1rem;
 }
 #movie-list {
   display: grid;
@@ -73,16 +104,18 @@ legend,
 label {
   cursor: pointer;
   font-weight: bold;
+  margin-right: 20px;
 }
 form {
   width: 600px;
 }
 input {
   width: 100%;
+  cursor: pointer;
 }
 textarea {
   resize: horizontal;
-  max-height: 300px;
+  margin-left: 15px;
 }
 input,
 textarea {
@@ -91,11 +124,10 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
-  border: 1px solid #ddd;
+  border: 2px solid rgb(79, 185, 227);
 }
 ::placeholder {
-  color: hotpink;
+  color: rgb(79, 185, 227);
   opacity: 1;
 }
 :-ms-input-placeholder {
@@ -132,12 +164,14 @@ input[type="radio"] {
   width: 18px;
   border-radius: 50%;
   display: horizontal;
-  margin-right: 1.2vw;
-  margin-left: 1.2vw;
+  margin-right: 0.7vw;
+  margin-left: 0.7vw;
   margin-top: 2vw;
-  margin-bottom: 3vw;
+  margin-bottom: 2vw;
 }
-
+.rating-invisible {
+  display: none;
+}
 /*
 input:checked::before {
   content: "";
@@ -156,3 +190,49 @@ input:checked::after {
   place-self: center;
 }
 */
+@media (max-width: 768px) {
+  img.movie-icon {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  img.movie-icon {
+    display: none;
+  }
+  #movie-list > article {
+    position: relative;
+    border-radius: 5px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  header {
+    width: 80%;
+    margin-left: 20px;
+  }
+  input.movie-title-pick {
+    width: 80%;
+    margin-left: 10px;
+  }
+  select.movie-title-pick {
+    width: 85%;
+    margin-left: 10px;
+  }
+  textarea.movie-title-pick {
+    width: 80%;
+    margin-left: 10px;
+  }
+  #movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 0;
+    gap: 10px;
+  }
+}

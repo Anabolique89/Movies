@@ -97,8 +97,7 @@ function showMovie(movie) {
   clone.querySelector("h2").textContent = movie.title;
   clone.querySelector("h3").textContent = movie.genre;
   clone.querySelector("span.template-rating").textContent = movie.rating;
-  clone.querySelector(".date").textContent = movie.year;
-  clone.querySelector("h5").textContent = movie.tagline;
+
   clone
     .querySelector(`[data-action="delete"]`)
     .addEventListener("click", (e) => deleteMovie(movie._id));
